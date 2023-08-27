@@ -20,7 +20,10 @@
    - 使用 face_recognition.face_encodings(img)[0] 提取第一個人臉的特徵編碼，存在encodinglist
    - 使用 face_recognition.face_locations(img, model="cnn")[0] 找到第一個人臉的位置坐標（上、右、下、左），並將其用於定位人臉。
    - 從文件路徑中提取出人臉的標籤（文件名），並將其添加到 labels 列表中
-   - 使用plt顯示圖片
-
+   - 使用matplotlib(plt)顯示圖片
+4. 讀取unknown_flist的照片進行人臉辨識，並獲取人臉位置的座標(上下左右)
+5. 使用 OpenCV 的 rectangle 函數在圖像上繪製一個矩形框，將檢測到的人臉圈起來，並指定矩形的顏色和粗細。
+6. 計算未知人臉特徵向量與已知人臉特徵向量的距離，找到最接近的已知人臉特徵向量的名稱，作為預測結果。
+7. 將處理後的圖像以網格的形式顯示在 Matplotlib 圖表中。
 
 
